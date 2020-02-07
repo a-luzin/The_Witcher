@@ -5,6 +5,7 @@
     font-weight: normal;
     font-style: normal;
   }
+
 body {
     background-color: #141218;
     font-family: 'Roboto', sans-serif;
@@ -25,6 +26,7 @@ body {
     margin: auto;
 }
 .header {
+    z-index: 1;
     padding-top: 60px;
     margin-bottom: 90px;
     display: flex;
@@ -239,7 +241,14 @@ body {
 .menu-button {
     display: none;
 }
-
+* {
+    -webkit-tap-highlight-color: transparent;
+    }
+    button, a{
+    outline:0;
+    outline-offset:0;
+    border:0;
+    }
 
 /* Responsive */
 @media (max-width: 760px) {
@@ -260,6 +269,7 @@ body {
 }
 @media (max-width: 540px) {
     .menu-button {
+        z-index: 9;
         display: block;
         position: absolute;
         right: 35px;
